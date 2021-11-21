@@ -1,0 +1,32 @@
+
+----------
+Epsilon: 0.01
+----------
+Mean: 132.0
+Standard deviation: 8.520563361656317
+Confidence interval: 132.0 +/- 5.281099885440532
+Confidence interval: 137.28109988544054 to 126.71890011455947
+
+----------
+Epsilon: 0.02
+----------
+Mean: 134.7
+Standard deviation: 7.868290792796107
+Confidence interval: 134.7 +/- 4.8768171587624645
+Confidence interval: 139.57681715876245 to 129.82318284123753
+
+----------
+Epsilon: 0.05
+----------
+Mean: 146.93333333333334
+Standard deviation: 19.924747314722854
+Confidence interval: 146.93333333333334 +/- 12.349486330298204
+Confidence interval: 159.28281966363153 to 134.58384700303515
+
+----------
+Epsilon: 0.1
+----------
+Mean: 169.175
+Standard deviation: 42.712344527080226
+Confidence interval: 169.175 +/- 26.473385410634585
+Confidence interval: 195.6483854106346 to 142.70161458936542
