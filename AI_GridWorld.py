@@ -18,7 +18,7 @@ def Statistics(data, sampleSize,t):
     return mean, std, confidenceInterval
 
 # Values
-sampleSize = 10
+sampleSize = 385
 score_target = 120
 
 gamma = 0.9
