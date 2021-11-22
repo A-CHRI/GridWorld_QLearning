@@ -91,13 +91,13 @@ for j in epsilon:
     print(f"Mean: {mean}")
     print(f"Standard deviation: {std}")
     print(f"Confidence interval: {mean} +/- {confidenceInterval}")
-    print(f"Confidence interval: {mean} + {confidenceInterval} to {mean - confidenceInterval}")
+    print(f"Confidence interval: {mean - confidenceInterval} to {mean + confidenceInterval}")
 
     with open('statistics.txt', 'a') as f:
         f.write(f"\n----------\nEpsilon: {j}\n----------\n")
         f.write(f"Mean: {mean}\n")
         f.write(f"Standard deviation: {std}\n")
         f.write(f"Confidence interval: {mean} +/- {confidenceInterval}\n")
-        f.write(f"Confidence interval: {mean + confidenceInterval} to {mean - confidenceInterval}\n")
+        f.write(f"Confidence interval: {mean - confidenceInterval} to {mean + confidenceInterval}\n")
 
 env.close()
