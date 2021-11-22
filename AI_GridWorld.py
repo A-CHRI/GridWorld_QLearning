@@ -16,7 +16,7 @@ sampleSize = 385
 score_target = 120
 
 gamma = 0.9
-epsilon = [0.01, 0.02, 0.05, 0.1]
+epsilon = [0.0, 0.01, 0.02, 0.05, 0.1]
 score = 0
 iteration_array = np.array([])
 
@@ -41,8 +41,8 @@ clock = pygame.time.Clock()
 iteration_max = 1000
 iteration = 0
 sample = 0
-for j in epsilon:
-    print(f"\n----------\nEpsilon: {j}\n----------")
+for eps in epsilon:
+    print(f"\n----------\nEpsilon: {eps}\n----------")
     sample = 0
     for i in range(sampleSize):
         # Reset and define data structure for q-table
@@ -55,7 +55,7 @@ for j in epsilon:
             
             # 1. choose an action
             q_current = q_table[(x, y, has_key)] # get current q-value for the state
-            if np.random.uniform(0, 1) < j: # choose random action with probability epsilon (Greedy action)
+            if np.random.uniform(0, 1) < eps: # choose random action with probability epsilon (Greedy action)
                 action_index = np.random.choice(len(actions))
             else:
                 action_index = np.argmax(q_current) # get index of the best action
@@ -88,7 +88,7 @@ for j in epsilon:
     print(f"Confidence interval: {mean - confidenceInterval} to {mean + confidenceInterval}")
 
     with open('statistics.txt', 'a') as f:
-        f.write(f"\n----------\nEpsilon: {j}\n----------\n")
+        f.write(f"\n----------\nEpsilon: {eps}\n----------\n")
         f.write(f"Mean: {mean}\n")
         f.write(f"Standard deviation: {std}\n")
         f.write(f"Confidence interval: {mean} +/- {confidenceInterval}\n")
