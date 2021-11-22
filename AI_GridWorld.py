@@ -5,17 +5,11 @@ from collections import defaultdict
 
 # Function for calculating statistics
 def Statistics(data, sampleSize,t):
-    # Calculate the mean
-    mean = np.mean(data)
-
-    # Calculate the standard deviation
-    std = np.std(data)
-
     # Calculate the confidence interval
-    confidenceInterval = t * std / np.sqrt(sampleSize)
+    confidenceInterval = t * np.std(data) / np.sqrt(sampleSize)
 
     # Return the calculated values
-    return mean, std, confidenceInterval
+    return np.mean(data), np.std(data), confidenceInterval
 
 # Values
 sampleSize = 385
